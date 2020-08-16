@@ -140,4 +140,6 @@ b10.categories.add(c5)
 ```sh
 $ python manage.py runserver
 ```
-##### 10. Now you can add data via upload button which is available on the main side (with useful API endpoins)
+##### 10. Now you can add data via upload button which is available on the main side (thanks to request library which collects data from that Google API: https://www.googleapis.com/books/v1/volumes?q=war). On the main site are available other urls endpoints.
+
+##### 11. Now you can test my app! Have a nice day!
