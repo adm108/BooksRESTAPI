@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if messages %}
+        <div style="text-align: center;">
+            {% for message in messages %}
+            <div>
+                <strong style="color: red;">{{ message|safe }}</strong>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <h2 style="text-align: center;">Upload data from GoogleAPI !</h2>
+    <form method="post" enctype="multipart/form-data" style="text-align: center;">
+        {% csrf_token %}
+        <label>Add data from GoogleAPI to the database</label>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <br>
+    <div style="text-align: center">
+        <h3>Endpoints for Books API and admin site:</h3>
+        <a href="http://127.0.0.1:8000/api/books/">Books API - all books</a>
+        <br>
+        <a href="http://127.0.0.1:8000/api/books/?sort=published_date">Books API - published_date - ascending order</a>
+        <br>
+        <a href="http://127.0.0.1:8000/api/books/?sort=-published_date">Books API - published_date - descending order</a>
+        <br>
+        <a href="http://127.0.0.1:8000/api/books/?published_date=2016">Books API - filtering by published_date</a>
+        <br>
+        <a href="http://127.0.0.1:8000/api/books/vMukDQAAQBAJ">Books API - selected book</a>
+        <br>
+        <a href="http://127.0.0.1:8000/api/books/?authors=Florian+Lempa&authors=Evan+Currie">Books API - selected authors</a>
+        <br>
+        <br>
+        <a href="http://127.0.0.1:8000/admin/">Admin site</a>
+    </div>
+</body>
+</html>
