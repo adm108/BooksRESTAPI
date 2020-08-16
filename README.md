@@ -46,7 +46,7 @@ $ python manage.py migrate
 ```sh
 $ python manage.py createsuperuser
 ```
-##### 8. Add data via shell from Google API (https://www.googleapis.com/books/v1/volumes?q=Hobbit), go to shell via terminal, copy prepared data below and paste it"
+##### 8. Add data via shell from Google API (https://www.googleapis.com/books/v1/volumes?q=Hobbit), go to shell via terminal, copy prepared data (available below) and paste it:
 ```sh
 $ python manage.py shell
 ```
